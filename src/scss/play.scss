@@ -2,7 +2,7 @@
     width: 100%;
 
     position: relative;
-    margin-top: 3.12srem;
+    margin-top: 3.125rem;
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
             width: 160px;
             border: 1rem solid;
             border-radius: 50%;
-            transition: tranform 0.2s;
+            transition: transform 0.2s;
             &--paper {
                 transform: translateX(1.5rem);
                 @include icon($imagePaper, $paper-gradient);
@@ -40,9 +40,9 @@
             }
 
             &--rock {
-                transform: translateX(-10rem) translatey(13rem);
+                transform: translateX(-10rem) translateY(13rem);
                 &:hover {
-                    transform: translateX(-10rem) translatey(13rem) scale(1.1);
+                    transform: translateX(-10rem) translateY(13rem) scale(1.1);
                 }
                 @include icon($imageRock, $rock-gradient);
             }
