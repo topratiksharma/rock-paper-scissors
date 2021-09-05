@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Triangle from '../images/bg-triangle.svg';
 
 const Play = ({ setMyChoice }) => {
   const setChoice = ({ target }) => {
@@ -8,21 +9,18 @@ const Play = ({ setMyChoice }) => {
 
   return (
     <div className='play'>
-      <Link to='/game'>
-        <div data-id='paper' className='icon icon--paper' onClick={setChoice}>
-          Paper
-        </div>
-      </Link>
-      <Link to='/game'>
-        <div data-id='scissors' className='icon icon--paper' onClick={setChoice}>
-          Scissors
-        </div>
-      </Link>
-      <Link to='/game'>
-        <div data-id='rock' className='icon icon--paper' onClick={setChoice}>
-          Rock
-        </div>
-      </Link>
+      <img src={Triangle} alt='' className='triangle' />
+      <div className='items'>
+        <Link to='/game'>
+          <div data-id='paper' className='icon icon--paper' onClick={setChoice}></div>
+        </Link>
+        <Link to='/game'>
+          <div data-id='scissors' className='icon icon--scissors' onClick={setChoice}></div>
+        </Link>
+        <Link to='/game'>
+          <div data-id='rock' className='icon icon--rock' onClick={setChoice}></div>
+        </Link>
+      </div>
     </div>
   );
 };
