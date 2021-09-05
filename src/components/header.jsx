@@ -1,19 +1,6 @@
-import * as React from 'react';
-import { Component } from 'react';
+import React from 'react';
+const Header = ({}) => {
+  return <h1>Header</h1>;
+};
 
-interface HeaderProps {
-    
-}
- 
-interface HeaderState {
-    
-}
- 
-class Header extends React.Component<HeaderProps, HeaderState> {
-    // state = { :  }
-    render() { 
-        return (<h1>Header Component</h1>  );
-    }
-}
- 
 export default Header;
