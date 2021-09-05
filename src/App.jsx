@@ -1,30 +1,29 @@
+import React, { useState } from 'react';
 import Header from './components/header';
 import Play from './components/play';
-import Footer from './components/footer';
-import Modal from './components/modal';
 import Game from './components/game';
-import { Route, Switch } from 'react-router-dom';
-import React from 'react';
+import Footer from './components/footer';
+import { Switch, Route } from 'react-router-dom';
 
 export const App = (props) => {
-  const [myChoice, setMyChoice] = React.useState('');
-  const [score, setScore] = React.useState(0);
+  const [myChoice, setMyChoice] = useState('');
+  const [score, setScore] = useState(0);
 
   return (
-    <h1>
+    <>
       <div className='container'>
-        <Header score={score}></Header>
+        <Header score={score} />
         <Switch>
           <Route exact path='/'>
             <Play setMyChoice={setMyChoice} />
           </Route>
-          <Route exact path='/game'>
+          <Route path='/game'>
             <Game myChoice={myChoice} score={score} setScore={setScore} />
           </Route>
         </Switch>
-        <Footer />
       </div>
-    </h1>
+      <Footer />
+    </>
   );
 };
 
