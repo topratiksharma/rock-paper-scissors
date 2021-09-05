@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;800&display=swap');
 @import '_variables.scss';
+@import 'header.scss';
 
 *,
 *::before,
@@ -15,8 +16,11 @@ body {
     background: $backgroud-gradient;
     text-align: center;
     box-sizing: border-box;
-    font-size: 2.5rem;
 }
-a {
-    color: white;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
