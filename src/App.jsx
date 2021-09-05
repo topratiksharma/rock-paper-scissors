@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from './components/header';
+import Header from './components/common/header';
 import Play from './components/play';
 import Game from './components/game';
-import Footer from './components/footer';
+import Footer from './components/common/footer';
 import { Switch, Route } from 'react-router-dom';
 
 export const App = (props) => {
