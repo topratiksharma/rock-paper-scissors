@@ -7,10 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer className='footer'>
-        <div class='attribution'>Coded by Pratik Sharma</div>
-        <button className='rules' onClick={toggle}>
-          Rules
-        </button>
+        <div className='attribution'>Coded by Pratik Sharma</div>
       </footer>
     </>
   );
