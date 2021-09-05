@@ -17,6 +17,7 @@ const Game = ({ score, myChoice, setScore }) => {
     const choices = ['rock', 'paper', 'scissors'];
     setHouse(choices[Math.floor(Math.random() * 3)]);
   };
+  
   useEffect(() => {
     newHousePick();
   }, []);
