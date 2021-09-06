@@ -42,7 +42,7 @@ const Game: React.FC<Props> = ({ score, myChoice, setScore }) => {
     if (myChoice === computer) {
       return setPlayerWin('draw');
     }
-    const values = get(GAME_COMBINATION, [myChoice])
+    const values = get(GAME_COMBINATION, [myChoice]);
 
     if (values.includes(computer)) {
       setPlayerWin('win');

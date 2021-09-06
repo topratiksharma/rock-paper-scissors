@@ -71,12 +71,14 @@
         display: flex;
         flex-direction: column;
         margin-left: 2.5rem;
+
         .text {
             text-transform: uppercase;
             font-size: 1.2rem;
             font-weight: 300;
             margin-bottom: 2.5rem;
         }
+
         .icon {
             height: 250px;
             width: 250px;
@@ -114,6 +116,202 @@
             height: 250px;
             justify-content: center;
             width: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .game {
+        display: flex;
+        &__you {
+            margin-left: 1rem;
+            .text {
+                margin-bottom: 1.5rem;
+            }
+            .icon {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                border: 15px solid;
+                margin-left: 1rem;
+                &--paper {
+                    @include icon($imagePaper, $paper-gradient);
+                    &--winner {
+                        @include midShadow($paper-gradient);
+                    }
+                }
+                &--scissors {
+                    @include icon($imageScissors, $scissors-gradient);
+                    &--winner {
+                        @include midShadow($scissors-gradient);
+                    }
+                }
+                &--rock {
+                    @include icon($imageRock, $rock-gradient);
+                    &--winner {
+                        @include midShadow($rock-gradient);
+                    }
+                }
+            }
+        }
+
+        &__play {
+            margin: 0 1rem;
+            .text {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .play-again {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 0.8rem;
+                margin-bottom: 1.5rem;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+
+        &__computer {
+            margin-left: 1rem;
+            .text {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .icon {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                border: 15px solid;
+                margin-left: 1rem;
+                &--paper {
+                    @include icon($imagePaper, $paper-gradient);
+                    &--winner {
+                        @include midShadow($paper-gradient);
+                    }
+                }
+                &--scissors {
+                    @include icon($imageScissors, $scissors-gradient);
+                    &--winner {
+                        @include midShadow($scissors-gradient);
+                    }
+                }
+                &--rock {
+                    @include icon($imageRock, $rock-gradient);
+                    &--winner {
+                        @include midShadow($rock-gradient);
+                    }
+                }
+            }
+
+            .counter {
+                margin-left: 1.5rem;
+                margin-bottom: 1.5rem;
+                font-size: 5rem;
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .game {
+        display: block;
+        &__you {
+            margin-left: 1rem;
+            .text {
+                margin-bottom: 1.5rem;
+            }
+            .icon {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                border: 15px solid;
+                margin-left: 1rem;
+                &--paper {
+                    @include icon($imagePaper, $paper-gradient);
+                    &--winner {
+                        @include smallShadow($paper-gradient);
+                    }
+                }
+                &--scissors {
+                    @include icon($imageScissors, $scissors-gradient);
+                    &--winner {
+                        @include smallShadow($scissors-gradient);
+                    }
+                }
+                &--rock {
+                    @include icon($imageRock, $rock-gradient);
+                    &--winner {
+                        @include bigShadow($rock-gradient);
+                    }
+                }
+            }
+        }
+
+        &__play {
+            margin: 0 1rem;
+            .text {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .play-again {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 0.8rem;
+                margin-bottom: 1.5rem;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+
+        &__computer {
+            margin-left: 1rem;
+            .text {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .icon {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                border: 15px solid;
+                margin-left: 1rem;
+                &--paper {
+                    @include icon($imagePaper, $paper-gradient);
+                    &--winner {
+                        @include smallShadow($paper-gradient);
+                    }
+                }
+                &--scissors {
+                    @include icon($imageScissors, $scissors-gradient);
+                    &--winner {
+                        @include smallShadow($scissors-gradient);
+                    }
+                }
+                &--rock {
+                    @include icon($imageRock, $rock-gradient);
+                    &--winner {
+                        @include smallShadow($rock-gradient);
+                    }
+                }
+            }
+
+            .counter {
+                margin-left: 1.5rem;
+                margin-bottom: 1.5rem;
+                font-size: 5rem;
+                height: 150px;
+                width: 150px;
+            }
         }
     }
 }

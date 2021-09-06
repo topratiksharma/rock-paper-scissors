@@ -8,10 +8,13 @@
         display: flex;
         flex-direction: column;
         margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        align-items: center;
         .text {
             text-transform: uppercase;
             font-size: 1.2rem;
             font-weight: 300;
+            margin-top: 2.5rem;
             margin-bottom: 2.5rem;
         }
         .icon {
@@ -27,6 +30,17 @@
             }
             &--computer {
                 @include icon($imageComputer, $computer-gradient);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+        &__option {
+            .icon {
+                height: 150px;
+                width: 150px;
             }
         }
     }

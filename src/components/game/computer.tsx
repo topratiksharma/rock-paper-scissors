@@ -13,11 +13,9 @@ const Computer: React.FC<Props> = ({
   result,
   label,
   type,
-  counter,
+  counter
 }) => {
-  const iconClass = `icon icon--${option} ${
-    result === 'lose' ? `icon--${option}--winner` : ''
-  }`;
+  const iconClass = `icon icon--${option} ${result === 'lose' ? `icon--${option}--winner` : ''}`;
   const parentClass = 'game__' + type;
   let iconType;
 
