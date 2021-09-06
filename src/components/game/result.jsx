@@ -6,9 +6,9 @@ const ResultComponent = ({ setHouse, result, player }) => {
     label = 'Match Draw';
   }
   return (
-    <div className='game__play'>
-      <span className='text'>{label}</span>
-      <Link to='/' className='play-again' onClick={() => setHouse()}>
+    <div className="game__play">
+      <span className="text">{label}</span>
+      <Link to="/" className="play-again" onClick={() => setHouse()}>
         Play Again
       </Link>
     </div>

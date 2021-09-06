@@ -57,14 +57,34 @@ const Game = ({ score, myChoice, setScore }) => {
   }, [counter, house]);
 
   return (
-    <div className='game'>
-      {isVsComputer ? 
-      <Computer option={myChoice} result={playerWin==='win'?'lose':'win'} label='Computer 1' type='computer' counter={counter} /> : 
-      <Player option={myChoice} result={playerWin} label='You' type='you' />}
+    <div className="game">
+      {isVsComputer ? (
+        <Computer
+          option={myChoice}
+          result={playerWin === 'win' ? 'lose' : 'win'}
+          label="Computer 1"
+          type="computer"
+          counter={counter}
+        />
+      ) : (
+        <Player option={myChoice} result={playerWin} label="You" type="you" />
+      )}
 
-      {playerWin && <ResultComponent setHouse={setHouse} result={playerWin} player={isVsComputer ? 'Computer 1' : 'You'} />}
+      {playerWin && (
+        <ResultComponent
+          setHouse={setHouse}
+          result={playerWin}
+          player={isVsComputer ? 'Computer 1' : 'You'}
+        />
+      )}
 
-      <Computer option={house} result={playerWin} label={isVsComputer ? 'Computer 2' : 'Computer'} type='computer' counter={counter} />
+      <Computer
+        option={house}
+        result={playerWin}
+        label={isVsComputer ? 'Computer 2' : 'Computer'}
+        type="computer"
+        counter={counter}
+      />
     </div>
   );
 };

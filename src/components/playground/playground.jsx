@@ -8,9 +8,9 @@ const Playground = ({ setMyChoice, choices }) => {
   };
 
   return (
-    <div className='play'>
-      <img src={Triangle} alt='' className='triangle' />
-      <div className='items'>
+    <div className="play">
+      <img src={Triangle} alt="" className="triangle" />
+      <div className="items">
         {choices.map((choice) => (
           <Choice type={choice} setChoice={setChoice} key={choice} />
         ))}
