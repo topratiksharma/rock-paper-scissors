@@ -1,5 +1,5 @@
-const Computer = ({ optionSelected, result, label, type, counter }) => {
-  const iconClass = `icon icon--${optionSelected} ${result === 'lose' ? `icon--${optionSelected}--winner` : ''}`;
+const Computer = ({ option, result, label, type, counter }) => {
+  const iconClass = `icon icon--${option} ${result === 'lose' ? `icon--${option}--winner` : ''}`;
   const parentClass = 'game__' + type;
   let iconType;
 

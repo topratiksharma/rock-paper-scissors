@@ -16,7 +16,7 @@ export const App = (props) => {
         <Header score={score} />
         <Switch>
           <Route exact path='/'>
-            <HomePage />
+            <HomePage setMyChoice={setMyChoice} />
           </Route>
           <Route exact path='/play'>
             <Playground setMyChoice={setMyChoice} choices={choices} />
