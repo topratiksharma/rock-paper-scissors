@@ -1,5 +1,10 @@
 import React from 'react';
-const Header = ({ score }) => {
+
+type Props = {
+  score: string;
+};
+
+const Header: React.FC<Props> = ({ score }) => {
   return (
     <div className="header">
       <div className="text">

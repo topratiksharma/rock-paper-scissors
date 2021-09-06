@@ -1,4 +1,20 @@
-const Computer = ({ option, result, label, type, counter }) => {
+import React from 'react';
+
+type Props = {
+  option: string;
+  result: string;
+  label: string;
+  type: string;
+  counter: number;
+};
+
+const Computer: React.FC<Props> = ({
+  option,
+  result,
+  label,
+  type,
+  counter,
+}) => {
   const iconClass = `icon icon--${option} ${
     result === 'lose' ? `icon--${option}--winner` : ''
   }`;

@@ -1,6 +1,9 @@
 import PlayerOption from './playerOption';
+type Props = {
+  setMyChoice: (choice: string) => void;
+};
 
-const HomePage = ({ setMyChoice }) => {
+const HomePage: React.FC<Props> = ({ setMyChoice }) => {
   const setChoice = () => {
     const choices = ['rock', 'paper', 'scissors'];
     setMyChoice(choices[Math.floor(Math.random() * 3)]);

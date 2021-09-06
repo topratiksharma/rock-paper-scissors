@@ -5,19 +5,25 @@ import queryString from 'query-string';
 import ResultComponent from './result';
 import Computer from './computer';
 
-const Game = ({ score, myChoice, setScore }) => {
+const GAME_COMBINATION = {
+  rock: ['scissors'],
+  scissors: ['paper'],
+  paper: ['rock'],
+};
+
+type Props = {
+  score: number;
+  myChoice: keyof typeof GAME_COMBINATION;
+  setScore: (s: number) => void;
+};
+
+const Game: React.FC<Props> = ({ score, myChoice, setScore }) => {
   const [computer, setComputer] = useState('');
   const [playerWin, setPlayerWin] = useState('');
   const choices = ['rock', 'paper', 'scissors'];
   const userType = queryString.parse(useLocation().search);
 
   const isVsComputer = userType?.type === 'comp';
-
-  const GAME_COMBINATION = {
-    rock: ['scissors'],
-    scissors: ['paper'],
-    paper: ['rock'],
-  };
 
   const [counter, setCounter] = useState(3);
 
@@ -31,9 +37,11 @@ const Game = ({ score, myChoice, setScore }) => {
 
   const result = () => {
     if (!myChoice || !computer) return;
+
     if (myChoice === computer) {
       return setPlayerWin('draw');
     }
+
     if (GAME_COMBINATION[myChoice].includes(computer)) {
       setPlayerWin('win');
       setScore(score + 1);
@@ -44,13 +52,11 @@ const Game = ({ score, myChoice, setScore }) => {
   };
 
   useEffect(() => {
-    const timer =
-      counter > 0
-        ? setInterval(() => {
-            setCounter(counter - 1);
-          }, 1000)
-        : result();
-
+    let timer: NodeJS.Timeout;
+    if (counter > 0) {
+      timer = setInterval(() => {setCounter(counter - 1);}, 1000)} else {
+      result();
+    }
     return () => {
       clearInterval(timer);
     };
