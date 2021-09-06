@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import ResultComponent from './result';
 import Computer from './computer';
+import get from 'lodash/get';
 
 const GAME_COMBINATION = {
   rock: ['scissors'],
@@ -13,7 +14,7 @@ const GAME_COMBINATION = {
 
 type Props = {
   score: number;
-  myChoice: keyof typeof GAME_COMBINATION;
+  myChoice: string;
   setScore: (s: number) => void;
 };
 
@@ -41,8 +42,9 @@ const Game: React.FC<Props> = ({ score, myChoice, setScore }) => {
     if (myChoice === computer) {
       return setPlayerWin('draw');
     }
+    const values = get(GAME_COMBINATION, [myChoice])
 
-    if (GAME_COMBINATION[myChoice].includes(computer)) {
+    if (values.includes(computer)) {
       setPlayerWin('win');
       setScore(score + 1);
     } else {
@@ -54,7 +56,10 @@ const Game: React.FC<Props> = ({ score, myChoice, setScore }) => {
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (counter > 0) {
-      timer = setInterval(() => {setCounter(counter - 1);}, 1000)} else {
+      timer = setInterval(() => {
+        setCounter(counter - 1);
+      }, 1000);
+    } else {
       result();
     }
     return () => {

@@ -9,10 +9,12 @@ import Game from './components/game/game';
 import HomePage from './components/home/home';
 import Playground from './components/playground/playground';
 
-export const App = () => {
+
+export const App: React.FC = () => {
   const [myChoice, setMyChoice] = useState('');
   const [score, setScore] = useState(0);
   const choices = ['paper', 'scissors', 'rock'];
+  
   return (
     <>
       <div className='container'>

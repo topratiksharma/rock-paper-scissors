@@ -2,8 +2,13 @@ import React from 'react';
 import Triangle from '../../images/bg-triangle.svg';
 import Choice from './choice';
 
-const Playground = ({ setMyChoice, choices }) => {
-  const setChoice = (e) => {
+type Props = {
+  setMyChoice: (choice: string) => void;
+  choices: string[];
+};
+
+const Playground: React.FC<Props> = ({ setMyChoice, choices }) => {
+  const setChoice = (e: any) => {
     setMyChoice(e.target.dataset.id);
   };
 

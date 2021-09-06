@@ -1,6 +1,12 @@
+import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 
-const Choice = ({ setChoice, type }) => {
+type Props = {
+  setChoice: MouseEventHandler<HTMLDivElement>;
+  type: string;
+};
+
+const Choice: React.FC<Props> = ({ setChoice, type }) => {
   const className = 'icon icon--' + type;
   return (
     <Link to="/game">

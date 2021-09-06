@@ -1,4 +1,6 @@
+import React from 'react';
 import PlayerOption from './playerOption';
+
 type Props = {
   setMyChoice: (choice: string) => void;
 };
