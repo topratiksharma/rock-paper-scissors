@@ -1,10 +1,14 @@
+// System Imports
 import React, { useState } from 'react';
-import Header from './components/common/header';
-import Playground from './components/playground/playground';
-import Game from './components/game/game';
+import { Route, Switch } from 'react-router-dom';
+
+// Dev Imports
 import Footer from './components/common/footer';
-import { Switch, Route } from 'react-router-dom';
+import Header from './components/common/header';
+import Game from './components/game/game';
 import HomePage from './components/home/home';
+import Playground from './components/playground/playground';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const App = (props) => {
   const [myChoice, setMyChoice] = useState('');
