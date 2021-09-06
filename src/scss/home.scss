@@ -1,0 +1,33 @@
+.home {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__option {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2.5rem;
+        .text {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+        .icon {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border-color: transparent;
+            border: 25px solid;
+            background-size: 50%;
+
+            &--player {
+                @include icon($imagePlayer, $player-gradient);
+            }
+            &--computer {
+                @include icon($imageComputer, $computer-gradient);
+            }
+        }
+    }
+}

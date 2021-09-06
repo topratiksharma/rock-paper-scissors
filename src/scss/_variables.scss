@@ -2,6 +2,9 @@ $scissors-gradient: hsl(39, 89%, 49%);
 $paper-gradient: hsl(230, 89%, 62%);
 $rock-gradient: hsl(349, 71%, 52%);
 
+$player-gradient: hsl(177, 62%, 49%);
+$computer-gradient: hsl(300, 76%, 42%);
+
 //text
 $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
@@ -15,3 +18,7 @@ $backgroud-gradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 1
 $imagePaper:"../images/icon-paper.svg";
 $imageRock:"../images/icon-rock.svg";
 $imageScissors:"../images/icon-scissors.svg";
+
+$imagePlayer:"../images/player-vs-comp.png";
+$imageComputer:"../images/comp-vs-comp.png";
+

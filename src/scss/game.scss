@@ -24,7 +24,6 @@
 
             &--paper {
                 @include icon($imagePaper, $paper-gradient);
-
                 &--winner {
                     @include bigShadow($paper-gradient);
                 }
@@ -37,7 +36,6 @@
             }
             &--rock {
                 @include icon($imageRock, $rock-gradient);
-
                 &--winner {
                     @include bigShadow($rock-gradient);
                 }
@@ -69,7 +67,7 @@
         }
     }
 
-    &__house {
+    &__computer {
         display: flex;
         flex-direction: column;
         margin-left: 2.5rem;
@@ -89,21 +87,18 @@
 
             &--paper {
                 @include icon($imagePaper, $paper-gradient);
-
                 &--winner {
                     @include bigShadow($paper-gradient);
                 }
             }
             &--scissors {
                 @include icon($imageScissors, $scissors-gradient);
-
                 &--winner {
                     @include bigShadow($scissors-gradient);
                 }
             }
             &--rock {
                 @include icon($imageRock, $rock-gradient);
-
                 &--winner {
                     @include bigShadow($rock-gradient);
                 }
@@ -111,15 +106,14 @@
         }
 
         .counter {
-            height: 250px;
-            width: 250px;
-            border-radius: 50%;
             background-color: rgba($color: #000000, $alpha: 0.3);
-            font-size: 8rem;
-
+            border-radius: 50%;
             display: flex;
             flex-direction: column;
+            font-size: 8rem;
+            height: 250px;
             justify-content: center;
+            width: 250px;
         }
     }
 }

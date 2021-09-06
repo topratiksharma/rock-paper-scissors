@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Player from './player';
+import ResultComponent from './result';
+import Computer from './computer';
 
 const Game = ({ score, myChoice, setScore }) => {
   const [house, setHouse] = useState('');
@@ -12,12 +14,12 @@ const Game = ({ score, myChoice, setScore }) => {
   };
 
   const [counter, setCounter] = useState(3);
-  
+
   const newHousePick = () => {
     const choices = ['rock', 'paper', 'scissors'];
     setHouse(choices[Math.floor(Math.random() * 3)]);
   };
-  
+
   useEffect(() => {
     newHousePick();
   }, []);
@@ -51,39 +53,9 @@ const Game = ({ score, myChoice, setScore }) => {
 
   return (
     <div className='game'>
-      <div className='game__you'>
-        <span className='text'>You Picked</span>
-        <div className={`icon icon--${myChoice} ${playerWin === 'win' ? `icon icon--${myChoice}--winner` : ''}`}></div>
-      </div>
-      {playerWin === 'win' && (
-        <div className='game__play'>
-          <span className='text'>You Win</span>
-          <Link to='/' className='play-again' onClick={() => setHouse()}>
-            Play Again
-          </Link>
-        </div>
-      )}
-      {playerWin === 'lose' && (
-        <div className='game__play'>
-          <span className='text'>You Lose</span>
-          <Link to='/' className='play-again' onClick={() => setHouse()}>
-            Play Again
-          </Link>
-        </div>
-      )}
-      {playerWin === 'draw' && (
-        <div className='game__play'>
-          <span className='text'>Draw</span>
-          <Link to='/' className='play-again' onClick={() => setHouse()}>
-            Play Again
-          </Link>
-        </div>
-      )}
-
-      <div className='game__house'>
-        <span className='text'>The House Picked</span>
-        {counter === 0 ? <div className={`icon icon--${house} ${playerWin === 'lose' ? `icon icon--${house}--winner` : ''}`}></div> : <div className='counter'>{counter}</div>}
-      </div>
+      <Player optionSelected={myChoice} result={playerWin} label='You' type='you' />
+      {playerWin && <ResultComponent setHouse={setHouse} result={playerWin} player='You' />}
+      <Computer optionSelected={house} result={playerWin} label='Computer' type='computer' counter={counter} />
     </div>
   );
 };

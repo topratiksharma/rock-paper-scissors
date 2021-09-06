@@ -4,6 +4,7 @@ import Playground from './components/playground/playground';
 import Game from './components/game/game';
 import Footer from './components/common/footer';
 import { Switch, Route } from 'react-router-dom';
+import HomePage from './components/home/home';
 
 export const App = (props) => {
   const [myChoice, setMyChoice] = useState('');
@@ -15,6 +16,9 @@ export const App = (props) => {
         <Header score={score} />
         <Switch>
           <Route exact path='/'>
+            <HomePage />
+          </Route>
+          <Route exact path='/play'>
             <Playground setMyChoice={setMyChoice} choices={choices} />
           </Route>
           <Route path='/game'>
