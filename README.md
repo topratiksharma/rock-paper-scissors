@@ -18,7 +18,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Player vs Computer
-In this option user lands on the playground screen and choose 1 of the option present once clicked user lands on game screen where computer AI randomly selects any of the present option. For intial purpose we have 3 options enabled `Rock`, `Paper`, `Scissors`.
+In this option user lands on the playground screen and can choose one of the displayed option from the screen.
+Once user clicks on one of the options (`rock`, `paper`,`scissors`) user is redirected to the game screen where computer randomly selects any of the present option.
+For intial purpose we have 3 options enabled `Rock`, `Paper`, `Scissors`. (can be extended in future);
 
 ## Computer vs Computer
-In this option user lands on game screen where computer AI randomly select the present options.
+In this option user lands on game screen where computer randomly selects the options to play the game.
