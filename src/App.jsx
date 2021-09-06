@@ -8,9 +8,8 @@ import Header from './components/common/header';
 import Game from './components/game/game';
 import HomePage from './components/home/home';
 import Playground from './components/playground/playground';
-import 'bootstrap/dist/css/bootstrap.css';
 
-export const App = (props) => {
+export const App = () => {
   const [myChoice, setMyChoice] = useState('');
   const [score, setScore] = useState(0);
   const choices = ['paper', 'scissors', 'rock'];

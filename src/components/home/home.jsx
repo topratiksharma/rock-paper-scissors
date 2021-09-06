@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import PlayerOption from './playerOption';
 
 const HomePage = ({ setMyChoice }) => {

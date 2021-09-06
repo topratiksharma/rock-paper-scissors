@@ -4,10 +4,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="attribution">
         Coded by
-        <a
-          href="https://github.com/topratiksharma/rock-paper-scissors"
-          target="_blank"
-        >
+        <a href="https://github.com/topratiksharma/rock-paper-scissors" target="_blank">
           Pratik Sharma
         </a>
       </div>

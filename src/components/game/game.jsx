@@ -6,7 +6,7 @@ import ResultComponent from './result';
 import Computer from './computer';
 
 const Game = ({ score, myChoice, setScore }) => {
-  const [house, setHouse] = useState('');
+  const [computer, setComputer] = useState('');
   const [playerWin, setPlayerWin] = useState('');
   const choices = ['rock', 'paper', 'scissors'];
   const userType = queryString.parse(useLocation().search);
@@ -21,20 +21,20 @@ const Game = ({ score, myChoice, setScore }) => {
 
   const [counter, setCounter] = useState(3);
 
-  const newHousePick = () => {
-    setHouse(choices[Math.floor(Math.random() * 3)]);
+  const newComputerPick = () => {
+    setComputer(choices[Math.floor(Math.random() * 3)]);
   };
 
   useEffect(() => {
-    newHousePick();
+    newComputerPick();
   }, []);
 
   const result = () => {
-    if (!myChoice || !house) return;
-    if (myChoice === house) {
+    if (!myChoice || !computer) return;
+    if (myChoice === computer) {
       return setPlayerWin('draw');
     }
-    if (GAME_COMBINATION[myChoice].includes(house)) {
+    if (GAME_COMBINATION[myChoice].includes(computer)) {
       setPlayerWin('win');
       setScore(score + 1);
     } else {
@@ -54,7 +54,7 @@ const Game = ({ score, myChoice, setScore }) => {
     return () => {
       clearInterval(timer);
     };
-  }, [counter, house]);
+  }, [counter, computer]);
 
   return (
     <div className="game">
@@ -72,14 +72,14 @@ const Game = ({ score, myChoice, setScore }) => {
 
       {playerWin && (
         <ResultComponent
-          setHouse={setHouse}
+          setComputer={setComputer}
           result={playerWin}
           player={isVsComputer ? 'Computer 1' : 'You'}
         />
       )}
 
       <Computer
-        option={house}
+        option={computer}
         result={playerWin}
         label={isVsComputer ? 'Computer 2' : 'Computer'}
         type="computer"
