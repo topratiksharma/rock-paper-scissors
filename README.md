@@ -1,12 +1,16 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rock Paper Scissors
+#### Application is made fully responsive using flex and media query
 
 ## How to run
 ##### Steps 1 - clone the git repository
 ##### Steps 2 - cd rock-paper-scissors
 ##### Steps 3 - yarn install or npm install
 ##### Steps 4 - yarn start or npm start
+
+## How to test
+##### run `yarn run e2e` and click on `run integration specs`
+For now the tests are less we can increase it as per the required.
+
 
 ### Or you can skip above all and click on the below hosted url or Heroku app
 [Rock Paper Scissors](https://rockpaperscissors-pratik.herokuapp.com/)
@@ -15,7 +19,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 #### Application has two options
 ##### 1 - Player vs Computer
 ##### 2 - Computer vs Computer
-
 
 ## Player vs Computer
 In this option user lands on the playground screen and can choose one of the displayed option from the screen.
