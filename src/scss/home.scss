@@ -1,6 +1,6 @@
 .home {
     display: flex;
-    margin-top: 50px;
+    margin-top: 150px;
     flex-wrap: nowrap;
     align-items: center;
 
@@ -35,12 +35,33 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 610px) {
     .home {
+        margin-top: 0px;
         &__option {
+            margin-right: .5rem;
+            margin-left: .5rem;
+            .text {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 300;
+                margin-top: 1.5rem;
+                margin-bottom: .5rem;
+            }
             .icon {
-                height: 150px;
-                width: 150px;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                border-color: transparent;
+                border: 10px solid;
+                background-size: 50%;
+
+                &--player {
+                    @include icon($imagePlayer, $player-gradient);
+                }
+                &--computer {
+                    @include icon($imageComputer, $computer-gradient);
+                }
             }
         }
     }

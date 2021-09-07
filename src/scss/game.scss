@@ -220,17 +220,18 @@
 
 @media only screen and (max-width: 600px) {
     .game {
+        margin-top: 2px;
         display: block;
         &__you {
-            margin-left: 1rem;
+            margin-left: 2rem;
             .text {
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.2rem;
             }
             .icon {
-                height: 150px;
-                width: 150px;
+                height: 100px;
+                width: 100px;
                 border-radius: 50%;
-                border: 15px solid;
+                border: 7px solid;
                 margin-left: 1rem;
                 &--paper {
                     @include icon($imagePaper, $paper-gradient);
@@ -256,16 +257,16 @@
         &__play {
             margin: 0 1rem;
             .text {
-                font-size: 1.5rem;
-                font-weight: 400;
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
+                font-size: 1rem;
+                font-weight: 300;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
             }
             .play-again {
                 padding: 10px 20px;
                 border-radius: 5px;
                 font-size: 0.8rem;
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.5rem;
                 &:hover {
                     color: red;
                 }
@@ -273,17 +274,16 @@
         }
 
         &__computer {
-            margin-left: 1rem;
+            margin-left: 2rem;
             .text {
-                margin-top: 1rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0.2rem;
             }
 
             .icon {
-                height: 150px;
-                width: 150px;
+                height: 100px;
+                width: 100px;
                 border-radius: 50%;
-                border: 15px solid;
+                border: 7px solid;
                 margin-left: 1rem;
                 &--paper {
                     @include icon($imagePaper, $paper-gradient);
