@@ -24,12 +24,15 @@
             border-color: transparent;
             border: 25px solid;
             background-size: 50%;
-
+            transition: transform 0.2s;
             &--player {
                 @include icon($imagePlayer, $player-gradient);
             }
             &--computer {
                 @include icon($imageComputer, $computer-gradient);
+            }
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
@@ -55,7 +58,6 @@
                 border-color: transparent;
                 border: 10px solid;
                 background-size: 50%;
-
                 &--player {
                     @include icon($imagePlayer, $player-gradient);
                 }
